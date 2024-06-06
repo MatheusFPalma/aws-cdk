@@ -1,0 +1,157 @@
+{
+  "version": "36.0.0",
+  "artifacts": {
+    "FleetManagementStack.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "FleetManagementStack.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "FleetManagementStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "FleetManagementStack.template.json",
+        "terminationProtection": false,
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/7df537f5a68891ac0f7a5d9509b0b3301d61675e1f6a557f57f15f98d84c400a.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "FleetManagementStack.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-lookup-role-${AWS::AccountId}-${AWS::Region}",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "FleetManagementStack.assets"
+      ],
+      "metadata": {
+        "/FleetManagementStack/FleetTable": [
+          {
+            "type": "aws:cdk:hasPhysicalName",
+            "data": {
+              "Ref": "FleetTableD11248F7"
+            }
+          }
+        ],
+        "/FleetManagementStack/FleetTable/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "FleetTableD11248F7"
+          }
+        ],
+        "/FleetManagementStack/RegisterVehicleHandler/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RegisterVehicleHandlerServiceRoleB8DE4121"
+          }
+        ],
+        "/FleetManagementStack/RegisterVehicleHandler/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RegisterVehicleHandlerServiceRoleDefaultPolicy9317EEDD"
+          }
+        ],
+        "/FleetManagementStack/RegisterVehicleHandler/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RegisterVehicleHandlerEA2E16EF"
+          }
+        ],
+        "/FleetManagementStack/FleetServiceApi/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "FleetServiceApiF73A09EB"
+          }
+        ],
+        "/FleetManagementStack/FleetServiceApi/Deployment/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "FleetServiceApiDeploymentAEA2AAB854c369bd9713cd6ccee335b057395b99"
+          }
+        ],
+        "/FleetManagementStack/FleetServiceApi/DeploymentStage.prod/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "FleetServiceApiDeploymentStageprodC3E94635"
+          }
+        ],
+        "/FleetManagementStack/FleetServiceApi/Endpoint": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "FleetServiceApiEndpoint5C7F012F"
+          }
+        ],
+        "/FleetManagementStack/FleetServiceApi/Default/vehicle/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "FleetServiceApivehicleB9DF35F0"
+          }
+        ],
+        "/FleetManagementStack/FleetServiceApi/Default/vehicle/POST/ApiPermission.FleetManagementStackFleetServiceApi858CD7E3.POST..vehicle": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "FleetServiceApivehiclePOSTApiPermissionFleetManagementStackFleetServiceApi858CD7E3POSTvehicleBC9DD6DD"
+          }
+        ],
+        "/FleetManagementStack/FleetServiceApi/Default/vehicle/POST/ApiPermission.Test.FleetManagementStackFleetServiceApi858CD7E3.POST..vehicle": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "FleetServiceApivehiclePOSTApiPermissionTestFleetManagementStackFleetServiceApi858CD7E3POSTvehicleEF116FC8"
+          }
+        ],
+        "/FleetManagementStack/FleetServiceApi/Default/vehicle/POST/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "FleetServiceApivehiclePOST9468585A"
+          }
+        ],
+        "/FleetManagementStack/ApiGatewayEndpoint": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiGatewayEndpoint"
+          }
+        ],
+        "/FleetManagementStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/FleetManagementStack/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable"
+          }
+        ],
+        "/FleetManagementStack/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/FleetManagementStack/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "FleetManagementStack"
+    },
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    }
+  }
+}
