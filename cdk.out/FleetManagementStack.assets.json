@@ -1,0 +1,32 @@
+{
+  "version": "36.0.0",
+  "files": {
+    "4de9cf6f55bf0ffb9edbb092738a5a7aaa418aeec2b2cce0eee4c5ec5f50bb89": {
+      "source": {
+        "path": "asset.4de9cf6f55bf0ffb9edbb092738a5a7aaa418aeec2b2cce0eee4c5ec5f50bb89",
+        "packaging": "zip"
+      },
+      "destinations": {
+        "current_account-current_region": {
+          "bucketName": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}",
+          "objectKey": "4de9cf6f55bf0ffb9edbb092738a5a7aaa418aeec2b2cce0eee4c5ec5f50bb89.zip",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-file-publishing-role-${AWS::AccountId}-${AWS::Region}"
+        }
+      }
+    },
+    "7df537f5a68891ac0f7a5d9509b0b3301d61675e1f6a557f57f15f98d84c400a": {
+      "source": {
+        "path": "FleetManagementStack.template.json",
+        "packaging": "file"
+      },
+      "destinations": {
+        "current_account-current_region": {
+          "bucketName": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}",
+          "objectKey": "7df537f5a68891ac0f7a5d9509b0b3301d61675e1f6a557f57f15f98d84c400a.json",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-file-publishing-role-${AWS::AccountId}-${AWS::Region}"
+        }
+      }
+    }
+  },
+  "dockerImages": {}
+}
